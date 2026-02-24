@@ -4,7 +4,7 @@
 
 ## One-Liner
 
-A hiring-focused, public case study of a private MVP for supply-chain traceability and cross-border cargo intelligence.
+A public case study of a private MVP for supply-chain traceability and cross-border cargo intelligence.
 
 **Private source code + real datasets are NOT included** (by design).
 
