@@ -1,197 +1,122 @@
-# Global Cargo Tracker (Case Study, Redacted)
+# Global Cargo Tracker - Redacted Case Study (2020-2021)
 
-`2020-2021` MVP / prototype for supply-chain traceability and cross-border cargo intelligence.
+**Case Study / Redacted**
 
-This repository is a public case study that documents the architecture, engineering decisions, and demo approach for a private project. The original source code and production-like datasets remain private.
+## One-Liner
+
+A hiring-focused, public case study of a private MVP for supply-chain traceability and cross-border cargo intelligence.
+
+**Private source code + real datasets are NOT included** (by design).
 
 ## Why This Exists
 
-International cargo and trade data is fragmented across many sources, formats, and jurisdictions. In practice, records may be incomplete, inconsistent, delayed, or contradictory.
+International trade and logistics data is fragmented across sources and often:
 
-The goal of the MVP was to test whether a single system could:
+- incomplete, delayed, and inconsistent
+- duplicated or partially conflicting
+- stored in incompatible formats
 
-- ingest heterogeneous logistics / trade / company-related data,
-- normalize and connect records across sources,
-- detect inconsistencies,
-- reconstruct a more reliable "factual picture" of a shipment / participant / trade chain,
-- expose results through a searchable web interface.
+The MVP goal was to validate that one system can reconstruct a more reliable "factual picture" of shipments/participants by:
 
-## What Was Built (MVP Scope)
-
-The private MVP combined several layers:
-
-- data ingestion and ETL scripts (multiple sources and formats),
-- data cleaning / normalization logic,
-- database schema + migrations,
-- verification / reconciliation views,
-- web application UI for search, company pages, trade-related pages, and cargo/transport views,
-- UI tests for core flows.
-
-The implementation included a Flask-based web app with multi-language routing and a set of feature screens around search, company profiles, foreign trade, transport, and related analytical pages.
-
-## Engineering Focus (What Makes This Relevant for Hiring)
-
-This project is useful as an engineering case study because it required:
-
-- designing for inconsistent and conflicting data,
-- building a practical MVP across backend + data + frontend concerns,
-- structuring a domain model for entities, trade events, and supporting evidence,
-- balancing product scope vs. implementation speed,
-- making the system explainable enough for analysts/end users (not only data pipelines).
-
-## My Role (2020-2021)
-
-I worked across the stack and product layer:
-
-- Backend engineering
-- Data engineering (ETL / transformations / schema work)
-- Frontend implementation (MVP UI)
-- Tech lead responsibilities
-- Product management responsibilities
-
-More detail: see `ROLE.md`.
-
-## Architecture Overview (High Level)
-
-The MVP architecture can be described as:
-
-1. Source ingestion
-2. Parsing / normalization
-3. Storage (MVP DB schema + updates/migrations)
-4. Reconciliation / verification logic
-5. Search and entity/trade views
-6. Analyst-facing UI pages
-
-Public diagrams and a synthetic demo are included in this repository (redacted and simplified).
-
-## Typical User Flow (Representative MVP Path)
-
-One representative flow in the private MVP:
-
-1. Search by company name / code / HS code
-2. Open company profile
-3. Navigate to foreign trade or transport-related sections
-4. Inspect linked records (transactions / docs / routes)
-5. Compare inconsistent fields across sources
-6. View normalized / cross-referenced result
-
-This public case study includes a simplified version of this flow on synthetic data.
-
-## Data Quality and Verification (Core Idea)
-
-The central engineering problem was not "just collecting data", but reconciling it.
-
-Examples of issues the MVP had to handle:
-
-- naming variations (same entity, different spellings / forms),
-- partial identifiers,
-- inconsistent dates / formats,
-- source-specific missing fields,
-- contradictory values across sources.
-
-The system design therefore emphasized:
-
-- normalization,
-- cross-source linking,
-- verification steps,
-- explicit handling of uncertainty and partial matches.
-
-## Reliability / Security Principles (MVP-Level)
-
-The original project documentation and design approach emphasized:
-
-- extensibility (new sources and flows),
-- scalability considerations,
-- reliability (error handling / validation checks),
-- information security constraints,
-- separation between public-facing outputs and sensitive data handling.
-
-This public repository intentionally excludes secrets, private datasets, and operational details.
+1. ingesting heterogeneous sources
+2. normalizing and linking records
+3. detecting contradictions
+4. producing an explainable reconciled view for analysts
 
 ## What Is Public vs. Private
 
-Public in this repository:
+### Public in This Repository
 
-- case-study narrative
-- architecture and data model diagrams (redacted/simplified)
-- synthetic demo dataset and walkthrough
-- selected screenshots/illustrations (only after review/redaction), including approved synthetic route UI screenshot(s)
+- architecture overview (redacted): `docs/architecture.md`
+- simplified data model (redacted): `docs/data-model.md`
+- data quality and reconciliation notes: `docs/data-quality-and-verification.md`
+- privacy / redaction scope: `docs/privacy-redaction.md`
+- limitations and roadmap: `docs/limitations-and-roadmap.md`
+- synthetic CLI demo (runs locally): `demo/README.md`
+- approved synthetic UI screenshot: `assets/screenshots/transport-route-synthetic.png`
 
-Private (available only on request / walkthrough basis):
+### Private (Not Published)
 
-- original source code repository
-- raw/legacy SQL data dumps and migrations containing real records
-- source-specific integrations and credentials
-- internal operational artifacts and environment-specific configuration
+- original MVP source code repository
+- real/historical datasets, SQL dumps, and migrations with real records
+- source-specific integrations, credentials, and operational details
 
-## Current Status of This Public Case Study
+## Architecture (High Level)
 
-This repository is a hiring-focused case-study artifact.
+See: `docs/architecture.md`
 
-Currently included:
+In short:
 
-- architecture diagram (Mermaid)
-- simplified data model
-- data quality / verification notes
-- privacy/redaction scope
-- limitations/roadmap
-- synthetic CLI demo (small synthetic dataset)
-- approved synthetic transport-route UI screenshot candidate (local MVP, `demo_route`)
+- ingestion/parsers -> normalization/cleaning -> matching/linking -> verification/reconciliation
+- storage + search/read models -> analyst-facing UI (private MVP)
 
-## Documentation
+## Synthetic Demo (CLI)
 
-- Architecture: `docs/architecture.md`
-- Data model: `docs/data-model.md`
-- Data quality and verification: `docs/data-quality-and-verification.md`
-- Privacy and redaction scope: `docs/privacy-redaction.md`
-- Limitations and roadmap: `docs/limitations-and-roadmap.md`
-- Synthetic demo (CLI): `demo/README.md`
-- Publish checklist: `PUBLISH_CHECKLIST.md`
-- Safe transfer workflow: `TRANSFER_TO_PUBLIC_REPO.md`
-- Screenshot triage (private-source review notes): `SCREENSHOT_TRIAGE.md`
+Prerequisites:
 
-## Visuals (Approved)
+- Python `3.9+`
+- no external dependencies
 
-### Synthetic Transport Route (Local MVP UI)
+Run:
 
-Included screenshot file:
+```bash
+python3 demo/demo_cli.py
+```
 
-- `assets/screenshots/transport-route-synthetic.png`
+What you'll see:
 
-Caption:
+- raw synthetic source records (multiple sources)
+- normalized comparison
+- detected contradictions
+- reconciled "factual picture" result
 
-- Synthetic route rendered in the local MVP transport page (`demo_route` mode): `RU -> CO` (`RULED -> COCTG`)
+Expected output example: `demo/expected_output.txt`
 
-Markdown embed:
+## What You Can Evaluate (Interview Review)
+
+- system decomposition for messy real-world data
+- reconciliation/verification approach (evidence + contradictions)
+- domain modeling choices for trade/transport entities
+- explainability-first output (not a "black box ETL")
+
+## My Role (2020-2021)
+
+I worked across the stack and product scope:
+
+- backend
+- data/ETL
+- schema/migrations
+- UI implementation
+- tech lead responsibilities
+- product responsibilities
+
+Details: `ROLE.md`
+
+## Security / Redaction Note
+
+This is a redacted case study. Examples are rewritten/synthetic to avoid exposing private code, secrets, or real records.
+
+- publishing checklist: `PUBLISH_CHECKLIST.md`
+- safe transfer workflow: `TRANSFER_TO_PUBLIC_REPO.md`
+
+## Visuals (Approved, Synthetic)
 
 ![Synthetic transport route (local MVP UI)](assets/screenshots/transport-route-synthetic.png)
 
-Notes:
+## Suggested Portfolio Label
 
-- Captured from local MVP page with synthetic company identity (`Synthetic Export Co`)
-- Suitable for public case-study use (no visible PII, no browser/desktop chrome)
+`Global Cargo Tracker (private code, public redacted case study) - Supply Chain Traceability MVP`
 
-## Notes on the Original MVP
+## GitHub About / Topics (Recommended)
 
-- Built in `2020-2021`
-- Legacy local data may have partial linkage issues after historical migrations
-- For the public case study, the demo is intentionally synthetic and focused on preserving the relationship model and UX flow rather than reproducing all historical real data exactly
+Set repository description to something close to:
 
-## How to Request a Deeper Walkthrough
+- `Redacted case study of a supply-chain traceability MVP with synthetic reconciliation demo`
 
-If you are a hiring manager / tech lead and want a deeper review:
+Suggested topics:
 
-- architecture walkthrough
-- selected code walkthrough (private, on request)
-- demo session with synthetic data
-
-## Publication Workflow (for Maintainer)
-
-Use:
-
-- `PUBLISH_CHECKLIST.md` before first public push
-- `TRANSFER_TO_PUBLIC_REPO.md` to move this draft into a separate public repository safely
-
-## Resume / Portfolio Label (Suggested)
-
-`Global Cargo Tracker (private code, public case study)` - Supply Chain Traceability MVP
+- `data-quality`
+- `etl`
+- `reconciliation`
+- `case-study`
+- `supply-chain`

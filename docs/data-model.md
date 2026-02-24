@@ -81,9 +81,9 @@ That means the data model must support:
 - conflict detection
 - normalized output for UI/search
 
-## What Will Be Demonstrated in the Synthetic Demo
+## What Is Demonstrated in the Synthetic Demo
 
-The public demo will use a small subset of this model:
+The public demo uses a small subset of this model:
 
 - `Company`
 - `TradeDeclaration`
@@ -93,4 +93,3 @@ The public demo will use a small subset of this model:
 - `VerificationResult`
 
 This keeps the demo small while preserving the core value proposition: cross-source reconciliation.
-

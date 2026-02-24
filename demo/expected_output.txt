@@ -1,0 +1,21 @@
+Synthetic Demo: Global Cargo Tracker (Redacted Case Study)
+Representative path: search -> company -> foreign_trade -> transport -> verification
+
+1) Raw Source Records
+[customs] declaration_no=RU-EXP-2021-0001, route_origin=RU, route_destination=CO
+[transport] source_record_id=TR-7788, origin_port=RULED, destination_port=COCTG
+
+2) Normalized Comparison (selected fields)
+normalized shipper: NORTHCHEMEXPORT == NORTHCHEMEXPORT
+normalized container: MSCU1234567 == MSCU1234567
+transport_event_date_normalized: 2021-02-04
+
+3) Detected Contradictions
+- shipment_date: customs 2021-02-03 vs transport 2021/02/04
+- container_no: MSCU1234567 vs MSCU-123456-7
+
+4) Reconciled 'Factual Picture' (Synthetic)
+entity_key_shipper=7701001001
+route_origin=RU, route_destination=CO
+origin_port=RULED, destination_port=COCTG
+verification_status=resolved_with_contradictions

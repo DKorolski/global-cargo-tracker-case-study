@@ -1,4 +1,4 @@
-# Privacy and Redaction Scope (Draft)
+# Privacy and Redaction Scope
 
 ## Why the Original Repository Is Private
 
@@ -31,4 +31,3 @@ It excludes:
 - Replace all identifiers/contact fields with synthetic placeholders
 - Keep structural relationships, remove real-world traceability to actual parties
 - Document what is hidden and why (privacy / IP / operational security)
-

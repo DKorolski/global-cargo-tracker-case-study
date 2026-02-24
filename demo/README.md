@@ -24,6 +24,11 @@ The records intentionally contain contradictions:
 
 ## Run
 
+Prerequisites:
+
+- Python `3.9+`
+- no external dependencies
+
 ```bash
 python3 demo/demo_cli.py
 ```
@@ -38,6 +43,8 @@ python3 demo/demo_cli.py
   - search -> company -> foreign_trade -> transport -> verification summary
 
 ## Expected Output (Excerpt)
+
+Full short sample: `demo/expected_output.txt`
 
 ```text
 Synthetic Demo: Global Cargo Tracker (Redacted Case Study)

@@ -29,12 +29,6 @@ mkdir -p global-cargo-tracker-case-study
 cp -R global-cargo-tracker/public-case-study-draft/. global-cargo-tracker-case-study/
 ```
 
-Optional cleanup if needed:
-
-```bash
-find global-cargo-tracker-case-study -name ".DS_Store" -delete
-```
-
 ### 3. Initialize the New Git Repository
 
 ```bash

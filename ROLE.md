@@ -8,13 +8,12 @@
 
 ## My Role
 
-I worked in a hybrid role combining implementation and product ownership:
+I worked in a hybrid role:
 
 - Backend engineer
 - Data engineer
 - Frontend engineer (MVP UI)
-- Tech lead
-- Product manager
+
 
 ## Contribution Areas (High-Level)
 
