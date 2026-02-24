@@ -164,9 +164,7 @@ Caption:
 
 Markdown embed (after placing the file):
 
-```md
 ![Synthetic transport route (local MVP UI)](assets/screenshots/transport-route-synthetic.png)
-```
 
 Notes:
 
