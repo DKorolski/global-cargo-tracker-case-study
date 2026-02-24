@@ -1,0 +1,19 @@
+[
+  {
+    "source": "company_registry",
+    "source_record_id": "RG-445",
+    "company_name": "North Chem Export LLC",
+    "tax_id": "7701001001",
+    "country": "RU",
+    "status": "active"
+  },
+  {
+    "source": "company_registry",
+    "source_record_id": "RG-446",
+    "company_name": "Andes Trade S.A.S.",
+    "tax_id": null,
+    "country": "CO",
+    "status": "active"
+  }
+]
+

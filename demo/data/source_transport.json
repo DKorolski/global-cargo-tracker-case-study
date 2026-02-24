@@ -1,0 +1,16 @@
+[
+  {
+    "source": "carrier_transport",
+    "source_record_id": "TR-7788",
+    "carrier_mode": "sea",
+    "event_type": "loaded",
+    "event_date": "2021/02/04",
+    "shipper_name": "NORTH CHEM EXPORT, LLC",
+    "consignee_name": "Andes Trade S.A.S.",
+    "container_no": "MSCU-123456-7",
+    "vessel_name": "MV SYNTHETIC STAR",
+    "origin_port": "RULED",
+    "destination_port": "COCTG"
+  }
+]
+

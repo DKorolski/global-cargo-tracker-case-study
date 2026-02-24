@@ -1,0 +1,19 @@
+[
+  {
+    "source": "customs_decl",
+    "source_record_id": "CD-0001",
+    "declaration_no": "RU-EXP-2021-0001",
+    "decl_date": "2021-02-03",
+    "hs_code": "2933694000",
+    "shipper_name": "NorthChem Export LLC",
+    "shipper_tax_id": "7701001001",
+    "buyer_name": "Andes Trade SAS",
+    "buyer_country": "CO",
+    "container_no": "MSCU1234567",
+    "route_origin": "RU",
+    "route_destination": "CO",
+    "gross_weight_kg": 20843,
+    "invoice_amount_usd": 17480
+  }
+]
+

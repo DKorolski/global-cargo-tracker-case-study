@@ -1,0 +1,15 @@
+# OS files
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+
+# Editor
+.vscode/
+.idea/
+
+# Local virtual envs
+.venv/
+venv/
+
