@@ -1,4 +1,4 @@
-# Limitations and Roadmap (Draft)
+# Limitations and Roadmap
 
 ## Current Limitations (Public Case Study)
 
@@ -17,10 +17,16 @@ The case study still demonstrates:
 - reconciliation/verification logic
 - MVP delivery trade-offs
 
-## Next Planned Additions
+## What I'd Redesign Now (If Continuing the Project)
 
-1. Synthetic demo dataset and runnable script/notebook
-2. Walkthrough of one representative user flow (search -> company -> trade/transport -> reconciliation)
-3. Selected screenshots after manual review/redaction
-4. More explicit "what I would redesign now" section
+1. Stronger provenance model for field-level decisions
+2. More explicit confidence scoring and review queues for fuzzy matches
+3. Clearer domain separation between ingestion, reconciliation, and UI read models
+4. Better observability for ETL runs (validation metrics, error buckets, source drift alerts)
+5. Reproducible public demo harness (fixtures + snapshot tests for expected outputs)
 
+## Near-Term Case-Study Improvements
+
+1. Add one more synthetic scenario with a different contradiction pattern (for example unresolved buyer identifier)
+2. Add a diagram showing evidence flow into the reconciled view
+3. Add a lightweight web demo or notebook wrapper around the CLI reconciliation output

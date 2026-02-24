@@ -62,7 +62,7 @@ The MVP architecture can be described as:
 5. Search and entity/trade views
 6. Analyst-facing UI pages
 
-Public diagrams and a synthetic demo will be added in this repository (redacted and simplified).
+Public diagrams and a synthetic demo are included in this repository (redacted and simplified).
 
 ## Typical User Flow (Representative MVP Path)
 
@@ -75,7 +75,7 @@ One representative flow in the private MVP:
 5. Compare inconsistent fields across sources
 6. View normalized / cross-referenced result
 
-This public case study will reproduce a simplified version of this flow on synthetic data.
+This public case study includes a simplified version of this flow on synthetic data.
 
 ## Data Quality and Verification (Core Idea)
 
@@ -126,9 +126,9 @@ Private (available only on request / walkthrough basis):
 
 ## Current Status of This Public Case Study
 
-This repository is being prepared as a hiring-focused artifact.
+This repository is a hiring-focused case-study artifact.
 
-Already included in draft form:
+Currently included:
 
 - architecture diagram (Mermaid)
 - simplified data model
@@ -138,7 +138,7 @@ Already included in draft form:
 - synthetic CLI demo (small synthetic dataset)
 - approved synthetic transport-route UI screenshot candidate (local MVP, `demo_route`)
 
-## Documentation (Draft)
+## Documentation
 
 - Architecture: `docs/architecture.md`
 - Data model: `docs/data-model.md`
@@ -154,15 +154,15 @@ Already included in draft form:
 
 ### Synthetic Transport Route (Local MVP UI)
 
-Recommended screenshot filename:
+Included screenshot file:
 
 - `assets/screenshots/transport-route-synthetic.png`
 
 Caption:
 
-- Synthetic route rendered in the local MVP transport page (`demo_route` mode): `Bogota -> Panama -> Cadiz`
+- Synthetic route rendered in the local MVP transport page (`demo_route` mode): `RU -> CO` (`RULED -> COCTG`)
 
-Markdown embed (after placing the file):
+Markdown embed:
 
 ![Synthetic transport route (local MVP UI)](assets/screenshots/transport-route-synthetic.png)
 
